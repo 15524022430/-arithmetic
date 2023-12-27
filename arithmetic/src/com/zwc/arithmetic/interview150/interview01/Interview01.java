@@ -3,7 +3,7 @@ package com.zwc.arithmetic.interview150.interview01;
 /**
  * @author: Zhuwenchao
  * @date: 2023/12/13 17:19
- * @description:
+ * @description:  合并两个有序数组
  */
 public class Interview01 {
     public static void main(String[] args) {

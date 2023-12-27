@@ -3,7 +3,7 @@ package com.zwc.arithmetic.interview150.interview02;
 /**
  * @author: Zhuwenchao
  * @date: 2023/12/19 11:14
- * @description:
+ * @description: 移除元素
  */
 public class Interview02 {
     public static void main(String[] args) {

@@ -26,10 +26,11 @@ package com.zwc.arithmetic.interview150.interview07;
  */
 public class Interview07 {
     public static void main(String[] args) {
-        int[] prices = {7,1,5,3,2,4};
+        int[] prices = {7,1,5,3,6,4};
         int i = maxProfit(prices);
+        int i1 = maxProfit2(prices);
         System.out.println(i);
-
+        System.out.println(i1);
     }
     public static int maxProfit(int[] prices) {
         //输出的答案
@@ -46,4 +47,34 @@ public class Interview07 {
         }
         return ans;
     }
+
+    /**
+     * 使用动态规划算法
+     * @return
+     */
+    public static int maxProfit1(int[] prices){
+        int[][]dp=new int[prices.length][2];
+        dp[0][0]-=prices[0];
+        dp[0][1]=0;
+        for(int i=1;i<prices.length;i++){
+            dp[i][0]=Math.max(dp[i-1][0],-prices[i]);
+            dp[i][1]=Math.max(dp[i-1][1],prices[i]+dp[i-1][0]);
+        }
+        return dp[prices.length-1][1];
+    }
+
+
+    public static int maxProfit2(int[] prices){
+        //预设二维数组初始值
+        int[][] dp = new int[prices.length][2];
+        dp[0][0] = prices[0];
+        dp[0][1] = prices[0] - prices[0];
+        for (int i = 1; i < prices.length; i++) {
+            dp[i][0] = Math.min(dp[i-1][0], prices[i]);
+            dp[i][1] = Math.max(dp[i-1][1], prices[i] - dp[i-1][0]);
+        }
+
+        return dp[prices.length-1][1];
+    }
+
 }

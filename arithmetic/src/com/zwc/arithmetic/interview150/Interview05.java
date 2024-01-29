@@ -1,4 +1,4 @@
-package com.zwc.arithmetic.interview150.interview05;
+package com.zwc.arithmetic.interview150;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,11 +1,11 @@
-package com.zwc.arithmetic.interview150.interview04;
+package com.zwc.arithmetic.interview150;
 
 /**
  * @author: Zhuwenchao
  * @date: 2023/12/27 10:15
  * @description: 删除有序数组中的重复项 II
  */
-public class Intreview04 {
+public class Interview04 {
     public static void main(String[] args) {
         int[] nums = {1, 1, 1, 2, 2, 3};
         System.out.println(removeDuplicates(nums));

@@ -1,4 +1,4 @@
-package com.zwc.arithmetic.interview150.interview02;
+package com.zwc.arithmetic.interview150;
 
 /**
  * @author: Zhuwenchao
